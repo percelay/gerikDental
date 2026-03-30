@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ToothLogo from "@/components/ToothLogo";
 
 export default function Hero() {
   return (
@@ -20,16 +21,26 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-2xl">
-          <p className="text-accent-light text-xs font-medium tracking-[0.25em] uppercase mb-6">
-            Gerik Dental &middot; Fairbanks, Alaska
-          </p>
+
+          {/* Dental identity badge */}
+          <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
+            <ToothLogo className="w-5 h-5" color="white" />
+            <span className="text-white text-xs font-medium tracking-[0.2em] uppercase">
+              Family Dentistry &middot; Fairbanks, Alaska
+            </span>
+          </div>
+
           <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none mb-6">
             Family
             <br />
             Matters
           </h1>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
+          <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-3 max-w-lg">
             We are a close-knit team; we&rsquo;ll treat you like family.
+          </p>
+          <p className="text-sm md:text-base text-white/55 leading-relaxed mb-10 max-w-lg">
+            Modern, high-quality dentistry to Alaskans of all ages &mdash; from exams
+            and fillings to implants, Invisalign, and laser drill-free dentistry.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link

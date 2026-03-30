@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Phone, Menu, X } from "lucide-react";
+import ToothLogo from "@/components/ToothLogo";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,23 +31,29 @@ export default function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex flex-col"
+              className="flex items-center gap-3"
               onClick={() => setMenuOpen(false)}
             >
-              <span
-                className={`font-serif text-xl md:text-2xl font-bold leading-tight transition-colors duration-300 ${
-                  scrolled || menuOpen ? "text-primary" : "text-white"
-                }`}
-              >
-                Gerik Dental
-              </span>
-              <span
-                className={`text-xs tracking-widest uppercase transition-colors duration-300 ${
-                  scrolled || menuOpen ? "text-muted" : "text-white/60"
-                }`}
-              >
-                Fairbanks, Alaska
-              </span>
+              <ToothLogo
+                className="w-8 h-8 flex-shrink-0 transition-colors duration-300"
+                color={scrolled || menuOpen ? "var(--color-primary)" : "white"}
+              />
+              <div className="flex flex-col">
+                <span
+                  className={`font-serif text-xl md:text-2xl font-bold leading-tight transition-colors duration-300 ${
+                    scrolled || menuOpen ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Gerik Dental
+                </span>
+                <span
+                  className={`text-xs tracking-widest uppercase transition-colors duration-300 ${
+                    scrolled || menuOpen ? "text-muted" : "text-white/60"
+                  }`}
+                >
+                  Fairbanks, Alaska
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Nav */}
