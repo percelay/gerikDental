@@ -26,21 +26,21 @@ export default function Hero() {
           <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
             <ToothLogo className="w-5 h-5" color="white" />
             <span className="text-white text-xs font-medium tracking-[0.2em] uppercase">
-              Family Dentistry &middot; Fairbanks, Alaska
+              Fairbanks, Alaska &middot; Est. 2014
             </span>
           </div>
 
-          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none mb-6">
-            Family
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+            Adult Dental Services,
             <br />
-            Matters
+            <span className="text-accent-light">Practical And Modern</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-3 max-w-lg">
-            We are a close-knit team; we&rsquo;ll treat you like family.
+          <p className="text-base md:text-lg text-white/75 leading-relaxed mb-3 max-w-lg">
+            No surprises; just quality dentistry. Exams, fillings, crowns, dentures,
+            root canals, extractions, implants, Invisalign, and laser drill-free dentistry.
           </p>
-          <p className="text-sm md:text-base text-white/55 leading-relaxed mb-10 max-w-lg">
-            Modern, high-quality dentistry to Alaskans of all ages &mdash; from exams
-            and fillings to implants, Invisalign, and laser drill-free dentistry.
+          <p className="text-sm text-white/45 leading-relaxed mb-10 max-w-md">
+            We are a close-knit team &mdash; we&rsquo;ll treat you like family.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
