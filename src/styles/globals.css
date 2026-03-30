@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Typography ─── */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  /* ─── Brand Palette: Steel & Cream · Alaskan Modern ─── */
+  /* Background: warm cream — family, inviting                */
+  --color-background: oklch(97% 0.010 75);
+  /* Surface: near-white for cards/panels                     */
+  --color-surface: oklch(99.5% 0.004 75);
+  /* Primary: deep steel-navy — trust, reliability, Air Force */
+  --color-primary: oklch(36% 0.095 240);
+  --color-primary-hover: oklch(42% 0.10 240);
+  --color-primary-foreground: oklch(97% 0.005 240);
+  /* Accent: teal — Alaskan waters, modern technology         */
+  --color-accent: oklch(50% 0.13 190);
+  --color-accent-light: oklch(65% 0.12 190);
+  /* Text: deep ink                                           */
+  --color-text: oklch(14% 0.020 250);
+  --color-muted: oklch(50% 0.015 250);
+  /* Borders: subtle steel tints                              */
+  --color-border: oklch(87% 0.010 240);
+  --color-border-subtle: oklch(93% 0.006 240);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
